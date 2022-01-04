@@ -11,12 +11,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-#@jsf.use(app)
-#class App():
-  #def __init__(self):
-    #self.print("welcome to the barber shop!")
-  
-
 class ClientModel(db.Model):
   Booked = db.Column(db.String(5), primary_key=True)
   Name = db.Column(db.String(30), nullable=False)
